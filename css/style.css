@@ -1,0 +1,147 @@
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+
+  --font-normal: 500;
+  --font-bold: 800;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: var(--font-normal);
+  background-color: var(--very-light-grayish-blue);
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.notifications {
+  max-width: 730px;
+  margin-inline: auto;
+  padding-inline: 1.5em;
+  background-color: var(--white);
+  box-shadow: 0 2.5em 2em var(--light-grayish-blue-1);
+}
+.notifications-head {
+  padding-block: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notifications-head__title {
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+  column-gap: 0.35em;
+  font-weight: var(--font-bold);
+}
+.notifications-head__title > span {
+  padding-inline: 0.5em;
+  border-radius: 0.2em;
+  font-size: 0.8em;
+  color: var(--white);
+  background-color: var(--blue);
+}
+.notifications-head__span {
+  cursor: pointer;
+  color: var(--grayish-blue);
+}
+
+
+.notifications-body{
+  display: grid;
+  row-gap: 1em;
+}
+.notifications-item{
+  width: 100%;
+  padding: 1em;
+  border-radius: .8em;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1em;
+  color: var(--dark-grayish-blue);
+}
+.notifications-item__picture img{
+  width: 2.5em;
+  height: 2.5em;
+}
+.notifications-item__info{
+  width: 100%;
+  display: grid;
+  row-gap: .1em;
+}
+.notifications-item__link{
+  font-weight: var(--font-bold);
+  color: var(--very-dark-blue);
+}
+.notifications-item__link--reacted{
+  font-weight: bold;
+  color: var(--dark-grayish-blue);
+}
+.notifications-item__link--group{
+  font-weight: bold;
+  color: var(--blue);
+}
+.notifications-item__link:hover{
+  color: var(--blue);
+}
+.notifications-item__time{
+  color: var(--grayish-blue);
+}
+.notifications-item__message{
+  padding: 1em;
+  margin: 0;
+  margin-block-start: .4em;
+  border: .1em solid var(--light-grayish-blue-2);
+  border-radius: .5em;
+  cursor: pointer;
+}
+.notifications-item__message:hover{
+  background-color: var(--light-grayish-blue-1);
+}
+.notifications-item__decoration{
+  width: .5em;
+  height: .5em;
+  border-radius: 100%;
+  display: none;
+  background-color: var(--red);
+}
+
+/* Status App */
+.notifications-item--unread{
+  border: .1em solid var(--light-grayish-blue-1);
+  background-color: var(--very-light-grayish-blue);
+}
+.notifications-item--unread .notifications-item__decoration{
+  display: inline-block;
+}
+
+@media (min-width: 1440px) and (min-height: 900px) {
+  body{
+    display: grid;
+    place-items: center;
+  }
+  .notifications{
+    border-radius: 1em;
+  }
+}

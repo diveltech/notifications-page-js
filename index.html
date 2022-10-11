@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Notifications page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="notifications">
+      <section class="notifications-head">
+        <h2 class="notifications-head__title">Notifications <span id="number-unread"></span></h2>
+        <span class="notifications-head__span" id="checked-read">Mark all as read</span>
+      </section>
+
+      <section class="notifications-body" id="notifications-container">
+        <article class="notifications-item notifications-item--unread">
+          <picture class="notifications-item__picture">
+            <img src="images/avatar-mark-webber.webp" alt="user avatar" />
+          </picture>
+          <div class="notifications-item__info">
+            <span>
+              <a href="#" class="notifications-item__link">Mark Webber</a> 
+              reacted to your recent post
+              <a href="#" class="notifications-item__link notifications-item__link--reacted">My first tournament today!</a>
+              <span class="notifications-item__decoration"></span>
+            </span> 
+             
+            <span class="notifications-item__time">1m ago</span>
+          </div>
+        </article>
+
+        <article class="notifications-item notifications-item--unread">
+          <picture class="notifications-item__picture">
+            <img src="images/avatar-angela-gray.webp" alt="user avatar" />
+          </picture>
+          <div class="notifications-item__info">
+            <span>
+              <a href="#" class="notifications-item__link">Angela Gray</a> 
+              followed you
+              <span class="notifications-item__decoration"></span>
+            </span> 
+             
+            <span class="notifications-item__time">5m ago</span>
+          </div>
+        </article>
+
+        <article class="notifications-item notifications-item--unread">
+          <picture class="notifications-item__picture">
+            <img src="images/avatar-jacob-thompson.webp" alt="user avatar" />
+          </picture>
+          <div class="notifications-item__info">
+            <span>
+              <a href="#" class="notifications-item__link">Jacob Thompson</a> 
+              has joined your group
+              <a href="#" class="notifications-item__link notifications-item__link--group">Chess Club</a> 
+              <span class="notifications-item__decoration"></span>
+            </span> 
+            <span class="notifications-item__time">1 day ago</span>
+          </div>
+        </article>
+
+        <article class="notifications-item">
+          <picture class="notifications-item__picture">
+            <img src="images/avatar-rizky-hasanuddin.webp" alt="user avatar" />
+          </picture>
+          <div class="notifications-item__info">
+            <span>
+              <a href="#" class="notifications-item__link">Rizky Hasanuddin</a> 
+              sent you a private message
+              <span class="notifications-item__decoration"></span>
+            </span> 
+            <span class="notifications-item__time">5 days ago</span>
+            <p class="notifications-item__message">
+              Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+              I'm already having lots of fun and improving my game.
+            </p>
+          </div>
+        </article>
+
+        <article class="notifications-item">
+          <picture class="notifications-item__picture">
+            <img src="images/avatar-kimberly-smith.webp" alt="user avatar" />
+          </picture>
+          <div class="notifications-item__info notifications-item__info--commented">
+            <span>
+              <a href="#" class="notifications-item__link">Kimberly Smith</a> 
+              commented on your picture
+              <span class="notifications-item__decoration"></span>
+            </span> 
+            <span class="notifications-item__time">1 week ago</span>
+          </div>
+          <picture class="notifications-item__picture">
+            <a href="#"><img src="images/image-chess.webp" alt="image chess"></a>
+          </picture>
+        </article>
+
+        <article class="notifications-item">
+          <picture class="notifications-item__picture">
+            <img src="images/avatar-nathan-peterson.webp" alt="user avatar" />
+          </picture>
+          <div class="notifications-item__info">
+            <span>
+              <a href="#" class="notifications-item__link">Nathan Peterson</a> 
+              reacted to your recent post
+              <a href="#" class="notifications-item__link notifications-item__link--reacted">5 end-game strategies to increase your win rate</a> 
+              <span class="notifications-item__decoration"></span>
+            </span> 
+            <span class="notifications-item__time">2 weeks ago</span>
+          </div>
+        </article>
+
+        <article class="notifications-item">
+          <picture class="notifications-item__picture">
+            <img src="images/avatar-anna-kim.webp" alt="user avatar" />
+          </picture>
+          <div class="notifications-item__info">
+            <span>
+              <a href="#" class="notifications-item__link">Anna Kim</a> 
+              left the group
+              <a href="#" class="notifications-item__link notifications-item__link--group">Chess Club</a> 
+              <span class="notifications-item__decoration"></span>
+            </span> 
+            <span class="notifications-item__time">2 weeks ago</span>
+          </div>
+        </article>
+      </section>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
